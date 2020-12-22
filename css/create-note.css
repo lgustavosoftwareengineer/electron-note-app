@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+main #note-title {
+  margin-bottom: 10px;
+}
+
+main #note-body {
+  margin-bottom: 10px;
+}
