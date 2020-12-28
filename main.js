@@ -4,13 +4,14 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: __dirname + `/icon.icns`,
     webPreferences: {
       nodeIntegration: true,
     },
   });
 
   win.loadFile("index.html");
-  //win.setMenu(null);
+  win.setMenu(null);
 }
 
 app.whenReady().then(createWindow);

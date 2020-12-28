@@ -121,6 +121,7 @@ main #create-note-button {
   box-shadow: 2px 2px 3px #999;
 
   text-decoration: none;
+  outline: none;
 
   display: flex;
   align-items: center;

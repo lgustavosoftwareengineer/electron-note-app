@@ -102,8 +102,9 @@ function load_notes() {
   }
   if (notes.length === 0) {
     const tag = document.createElement("p");
-    const text = document.createTextNode("Don't have notes yet");
-    tag.appendChild(text);
+    const text = `Que tal você me <b>"notar"</b>? Clicando no botão com o <b>"+"?</b>`;
+
+    tag.innerHTML = text;
 
     const body = document.getElementsByTagName("main")[0];
     body.appendChild(tag);

@@ -83,6 +83,9 @@ main .action-button {
   border: none;
   border-radius: 6px;
 
+  text-decoration: none;
+  outline: none;
+
   height: 30px;
   width: 10%;
   transition: 0.5s ease-in;

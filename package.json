@@ -1,7 +1,7 @@
 {
   "name": "note-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Its a app to take notes",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron-packager": "^15.2.0",
     "moment": "^2.29.1",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "electron": "^11.1.1"
   }
 }
