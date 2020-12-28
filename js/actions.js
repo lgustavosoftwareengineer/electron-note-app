@@ -10,6 +10,7 @@ function load_notes() {
     notes.map((note) => {
       const note_container = document.createElement("div");
       const note_content = document.createElement("div");
+      const show_note = document.createElement("div");
       const note_title = document.createElement("h2");
       const note_body = document.createElement("p");
       const note_created_date = document.createElement("p");
@@ -26,6 +27,7 @@ function load_notes() {
       note_container.className = "note-element";
       note_content.className = "note-element-content";
 
+      show_note.id = "show-note";
       note_title.id = "note-title";
       note_body.id = "note-body";
       note_created_date.id = "note-date";
@@ -35,6 +37,14 @@ function load_notes() {
       delete_button.style.display = "none";
 
       note_content.onclick = function () {
+        localStorage.setItem("now-note", note_container.id);
+
+        window.location.href = "./pages/note.html";
+
+        console.log(localStorage.getItem("now-note"));
+      };
+
+      show_note.onclick = function () {
         localStorage.setItem("now-note", note_container.id);
 
         window.location.href = "./pages/note.html";
@@ -77,6 +87,7 @@ function load_notes() {
       note_content.appendChild(note_title);
       note_content.appendChild(note_body);
       note_container.appendChild(note_content);
+      note_container.appendChild(show_note);
 
       if (!note.was_edited) {
         note_content.appendChild(note_created_date);

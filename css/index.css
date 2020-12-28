@@ -55,6 +55,10 @@ main .note-element {
   justify-content: space-between;
 }
 
+main .note-element #show-note {
+  width: 100%;
+}
+
 main .note-element-content {
   display: flex;
   flex-direction: column;
