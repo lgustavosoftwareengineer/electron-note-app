@@ -81,6 +81,21 @@ function delete_note(id) {
   }
 }
 
+function delete_now_note() {
+  const now_note = localStorage.getItem("now-note");
+  const notes = JSON.parse(localStorage.getItem("notes"));
+
+  if (notes) {
+    const new_notes = notes.filter((note) => note.id != now_note);
+
+    localStorage.setItem("notes", JSON.stringify(new_notes));
+    alert("Nota deletada com sucesso!");
+    window.location.href = "../index.html";
+  } else {
+    alert("Não existe notas para serem excluídas");
+  }
+}
+
 function create_note() {
   const note_title = document.getElementById("note-title").value;
   const note_body = document.getElementById("note-body").value;
