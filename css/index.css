@@ -1,7 +1,91 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+:root {
+  --main-color: #030303;
+  --secondary-color: #3b3b3b;
+  --third-color: #8f8f8f;
+  --black: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* background-color: red; */
+  width: 100vw;
+}
+
+header h1 {
+  font-size: 50px;
+  color: var(--main-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: green; */
+}
+
 main > * {
   cursor: pointer;
 }
 
 main .note-element {
-  color: #757574;
+  color: var(--secondary-color);
+  padding: 20px;
+  width: 100%;
+  margin: 10px;
+  border-bottom: 1px solid rgba(163, 163, 163, 0.5);
+  transition: 1s linear;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main .note-element:hover {
+  color: var(--main-color);
+  background-color: rgba(163, 163, 163, 0.2);
+  padding: 20px;
+  width: 200%;
+}
+
+main #create-note-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #create-note-button:hover {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

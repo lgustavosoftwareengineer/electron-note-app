@@ -19,6 +19,11 @@ function load_notes() {
       note_container.id = note.id;
       note_container.className = "note-element";
 
+      note_title.id = "note-title";
+      note_created_date.id = "note-created-date";
+      note_update_date.id = "note-created-date";
+      delete_button.id = "note-delete-button";
+
       note_title.onclick = function () {
         localStorage.setItem("now-note", note_container.id);
 
