@@ -32,6 +32,22 @@ function load_notes() {
         console.log(localStorage.getItem("now-note"));
       };
 
+      note_created_date.onclick = function () {
+        localStorage.setItem("now-note", note_container.id);
+
+        window.location.href = "./pages/note.html";
+
+        console.log(localStorage.getItem("now-note"));
+      };
+
+      note_update_date.onclick = function () {
+        localStorage.setItem("now-note", note_container.id);
+
+        window.location.href = "./pages/note.html";
+
+        console.log(localStorage.getItem("now-note"));
+      };
+
       delete_button.onclick = function () {
         delete_note(note.id);
       };
