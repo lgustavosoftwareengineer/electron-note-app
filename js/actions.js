@@ -9,22 +9,32 @@ function load_notes() {
   if (notes) {
     notes.map((note) => {
       const note_container = document.createElement("div");
+      const note_content = document.createElement("div");
       const note_title = document.createElement("h2");
+      const note_body = document.createElement("p");
       const note_created_date = document.createElement("p");
       const note_update_date = document.createElement("p");
       const delete_button = document.createElement("button");
 
-      delete_button.innerHTML = "Deletar nota";
+      delete_button.innerHTML = `
+      <i class="fa fa-trash-o" 
+        aria-hidden="true" 
+      </i>
+      `;
 
       note_container.id = note.id;
       note_container.className = "note-element";
+      note_content.className = "note-element-content";
 
       note_title.id = "note-title";
-      note_created_date.id = "note-created-date";
-      note_update_date.id = "note-created-date";
+      note_body.id = "note-body";
+      note_created_date.id = "note-date";
+      note_update_date.id = "note-date";
       delete_button.id = "note-delete-button";
 
-      note_title.onclick = function () {
+      delete_button.style.display = "none";
+
+      note_content.onclick = function () {
         localStorage.setItem("now-note", note_container.id);
 
         window.location.href = "./pages/note.html";
@@ -32,20 +42,13 @@ function load_notes() {
         console.log(localStorage.getItem("now-note"));
       };
 
-      note_created_date.onclick = function () {
-        localStorage.setItem("now-note", note_container.id);
-
-        window.location.href = "./pages/note.html";
-
-        console.log(localStorage.getItem("now-note"));
+      note_container.onmouseover = function () {
+        delete_button.style.display = "flex";
       };
 
-      note_update_date.onclick = function () {
-        localStorage.setItem("now-note", note_container.id);
-
-        window.location.href = "./pages/note.html";
-
-        console.log(localStorage.getItem("now-note"));
+      note_container.onmouseout = function () {
+        delete_button.style.display = "none";
+        console.log("hello");
       };
 
       delete_button.onclick = function () {
@@ -60,18 +63,25 @@ function load_notes() {
         `Editado em ${note.updated_at}`
       );
 
+      const note_body_content = document.createTextNode(
+        `${note.body.substring(0, 50)}...`
+      );
+
       note_title.appendChild(note_title_content);
+      note_body.appendChild(note_body_content);
       note_created_date.appendChild(note_created_date_content);
       note_update_date.appendChild(note_updated_date_content);
 
       const body = document.getElementsByTagName("main")[0];
 
-      note_container.appendChild(note_title);
+      note_content.appendChild(note_title);
+      note_content.appendChild(note_body);
+      note_container.appendChild(note_content);
 
       if (!note.was_edited) {
-        note_container.appendChild(note_created_date);
+        note_content.appendChild(note_created_date);
       } else {
-        note_container.appendChild(note_update_date);
+        note_content.appendChild(note_update_date);
       }
 
       note_container.appendChild(delete_button);

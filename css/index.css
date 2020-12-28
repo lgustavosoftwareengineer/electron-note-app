@@ -49,6 +49,48 @@ main .note-element {
   transition: 1s linear;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main .note-element-content {
+  display: flex;
+  flex-direction: column;
+}
+
+main #note-delete-button {
+  color: #f26874;
+  background-color: rgba(163, 163, 163, 0);
+  font-size: 40px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+main #note-delete-button:hover {
+  color: #fff;
+  background-color: #f26874;
+  font-size: 40px;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main .note-element:hover {
@@ -93,4 +135,9 @@ main #create-note-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+main .note-element #note-date {
+  font-size: 15px;
+  color: rgba(163, 163, 163, 0.9);
 }
