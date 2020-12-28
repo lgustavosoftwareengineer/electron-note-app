@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../css/create-note.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script src="../js/actions.js" defer></script>
     <title>Create a note</title>
   </head>
   <body>
     <header>
-      <h1>Create a note</h1>
-      <a href="../index.html">Back to see all the notes</a>
+      <a href="../index.html" class="back-button">
+        <div>
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
+      </a>
+      <h1 style="margin-left: 20px">Create a note</h1>
     </header>
     <main>
       <input
@@ -26,7 +39,14 @@
         rows="10"
         placeholder="Type the content of the note here..."
       ></textarea>
-      <input type="button" value="Create Note" onclick="create_note()" />
+      <div class="buttons-container">
+        <input
+          type="button"
+          value="Create Note"
+          onclick="create_note()"
+          class="action-button"
+        />
+      </div>
     </main>
   </body>
 </html>

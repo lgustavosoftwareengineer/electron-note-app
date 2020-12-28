@@ -192,7 +192,8 @@ function edit_note() {
   const note_body = document.getElementById("note-body").value;
 
   notes.map((note) => {
-    if ((note.id = now_note)) {
+    if (note.id === now_note) {
+      console.log(note.id);
       note.title = note_title;
       note.body = note_body;
       note.updated_at = moment().format("LLL");

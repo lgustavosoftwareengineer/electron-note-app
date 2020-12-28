@@ -1,17 +1,88 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+:root {
+  --main-color: #030303;
+  --secondary-color: #3b3b3b;
+  --third-color: #8f8f8f;
+  --black: #fff;
+}
+
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+header .back-button {
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+
+  margin: 10px;
+  font-size: 40px;
+}
+
+header #note-header-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-right: 64px;
 }
 main {
   display: flex;
   flex-direction: column;
+
+  justify-content: center;
   padding: 10px;
 }
 
 main #note-title {
   margin-bottom: 10px;
+  border: 1px solid rgba(163, 163, 163, 0.5);
+  outline: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: rgba(163, 163, 163, 1);
 }
 
 main #note-body {
   margin-bottom: 10px;
+  border: 1px solid rgba(163, 163, 163, 0.5);
+  outline: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+main .buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+main .action-button {
+  background-color: var(--main-color);
+  color: #fff;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+
+  height: 30px;
+  width: 10%;
+  transition: 0.5s ease-in;
+}
+
+main .action-button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  margin: 5px;
+
+  width: 30%;
+}
+
+main #delete-button:hover {
+  background-color: #f26874;
+  color: #fff;
+  margin: 5px;
 }
