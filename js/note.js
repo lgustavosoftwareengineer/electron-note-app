@@ -25,3 +25,17 @@ function change_delete_button_content(change) {
   </div>`;
   }
 }
+
+function change_create_button_content(change) {
+  if (change === true) {
+    setTimeout(() => {
+      const button_content = document.getElementById("create-button");
+      button_content.innerHTML = `<i class="fa fa-check" aria-hidden="true" style="margin: 5px;"></i> Criar Nota`;
+    }, 500);
+  } else {
+    const button_content = document.getElementById("create-button");
+    button_content.innerHTML = `<div id="edit-note-button-content">
+      <i class="fa fa-check" aria-hidden="true"></i>
+  </div>`;
+  }
+}

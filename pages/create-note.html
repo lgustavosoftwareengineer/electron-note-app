@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <script src="../js/actions.js" defer></script>
+    <script src="../js/note.js" defer></script>
     <title>Create a note</title>
   </head>
   <body>
@@ -30,22 +31,27 @@
         type="text"
         name=""
         id="note-title"
-        placeholder="Type the title here..."
+        placeholder="Digite o título da nota aqui..."
       />
       <textarea
         name=""
         id="note-body"
         cols="30"
         rows="10"
-        placeholder="Type the content of the note here..."
+        placeholder="Digite o corpo da nota aqui..."
       ></textarea>
       <div class="buttons-container">
-        <input
+        <button
           type="button"
           value="Create Note"
-          onclick="create_note()"
           class="action-button"
-        />
+          id="create-button"
+          onclick="create_note()"
+          onmouseover="change_create_button_content(true)"
+          onmouseout="change_create_button_content(false)"
+        >
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </button>
       </div>
     </main>
   </body>

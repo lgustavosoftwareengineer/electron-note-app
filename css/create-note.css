@@ -20,6 +20,18 @@ header .back-button {
 
   margin: 10px;
   font-size: 40px;
+  text-decoration: none;
+  transition: 0.5s ease-in;
+}
+
+header .back-button:hover {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+
+  margin: 10px;
+  font-size: 40px;
+  text-decoration: none;
 }
 
 header #note-header-title {
@@ -32,8 +44,9 @@ main {
   display: flex;
   flex-direction: column;
 
-  justify-content: center;
-  padding: 10px;
+  align-content: center;
+  padding: 20px;
+  margin: 20px;
 }
 
 main #note-title {
@@ -41,8 +54,9 @@ main #note-title {
   border: 1px solid rgba(163, 163, 163, 0.5);
   outline: none;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(163, 163, 163, 1);
+  padding: 10px;
 }
 
 main #note-body {
@@ -50,7 +64,8 @@ main #note-body {
   border: 1px solid rgba(163, 163, 163, 0.5);
   outline: none;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 10px;
 }
 
 main .buttons-container {
@@ -85,4 +100,12 @@ main #delete-button:hover {
   background-color: #f26874;
   color: #fff;
   margin: 5px;
+}
+
+main #create-button:hover {
+  background-color: #89e37d;
+}
+
+main #edit-button:hover {
+  background-color: #dbd66e;
 }

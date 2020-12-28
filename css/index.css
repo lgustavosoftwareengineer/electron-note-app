@@ -64,6 +64,10 @@ main .note-element-content {
   flex-direction: column;
 }
 
+main .note-element-content #note-title {
+  margin-bottom: 0px;
+}
+
 main #note-delete-button {
   color: #f26874;
   background-color: rgba(163, 163, 163, 0);
@@ -88,7 +92,7 @@ main #note-delete-button:hover {
   border: none;
   outline: none;
   border-radius: 100px;
-  height: 100px;
+  height: 50px;
   width: 100px;
   padding: 10px;
 
@@ -144,4 +148,5 @@ main #create-note-button:hover {
 main .note-element #note-date {
   font-size: 15px;
   color: rgba(163, 163, 163, 0.9);
+  margin-top: 0px;
 }
