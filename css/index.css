@@ -66,6 +66,17 @@ main .note-element-content {
 
 main .note-element-content #note-title {
   margin-bottom: 0px;
+  width: 200%;
+}
+
+main .note-element-content #note-body {
+  font-size: 13px;
+}
+
+main .note-element #note-date {
+  font-size: 11px;
+  color: rgba(163, 163, 163, 1);
+  margin-top: 0px;
 }
 
 main #note-delete-button {
@@ -144,10 +155,4 @@ main #create-note-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-main .note-element #note-date {
-  font-size: 15px;
-  color: rgba(163, 163, 163, 0.9);
-  margin-top: 0px;
 }
