@@ -34,6 +34,32 @@ header .back-button:hover {
   text-decoration: none;
 }
 
+.back-button-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: #fff;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+
+  text-decoration: none;
+  outline: none;
+
+  height: 30px;
+  width: 10%;
+  transition: 0.5s ease-in;
+}
+
+.back-button-create:hover {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+  text-decoration: none;
+}
+
 header #note-header-title {
   display: flex;
   width: 100%;
@@ -47,11 +73,13 @@ main {
   align-content: center;
   padding: 20px;
   margin: 20px;
+  margin-top: 0;
 }
 
 main #note-title {
   margin-bottom: 10px;
-  border: 1px solid rgba(163, 163, 163, 0.5);
+  border: 0 solid rgba(163, 163, 163, 0);
+  border-bottom: 1px solid rgba(163, 163, 163, 0.5);
   outline: none;
   border-radius: 6px;
   font-size: 16px;
@@ -61,7 +89,8 @@ main #note-title {
 
 main #note-body {
   margin-bottom: 10px;
-  border: 1px solid rgba(163, 163, 163, 0.5);
+  /* border: 1px solid rgba(163, 163, 163, 0.5); */
+  border: none;
   outline: none;
   border-radius: 6px;
   font-size: 16px;
@@ -110,5 +139,5 @@ main #create-button:hover {
 }
 
 main #edit-button:hover {
-  background-color: #dbd66e;
+  background-color: #89e37d;
 }
