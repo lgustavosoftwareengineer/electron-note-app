@@ -18,29 +18,26 @@
     <title>Criar uma nota</title>
   </head>
   <body>
-    <header>
-      <a href="../index.html" class="back-button">
-        <div>
-          <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </div>
-      </a>
-      <h1 style="margin-left: 20px">Criar uma nota</h1>
-    </header>
     <main>
+      <textarea
+        name=""
+        id="note-body"
+        cols="30"
+        rows="50"
+        placeholder="Digite o corpo da nota aqui..."
+      ></textarea>
       <input
         type="text"
         name=""
         id="note-title"
         placeholder="Digite o título da nota aqui..."
       />
-      <textarea
-        name=""
-        id="note-body"
-        cols="30"
-        rows="10"
-        placeholder="Digite o corpo da nota aqui..."
-      ></textarea>
       <div class="buttons-container">
+        <a href="../index.html" class="back-button-create">
+          <div>
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          </div>
+        </a>
         <button
           type="button"
           value="Create Note"
