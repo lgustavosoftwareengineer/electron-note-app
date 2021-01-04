@@ -11,7 +11,7 @@ function load_notes() {
       const note_container = document.createElement("div");
       const note_content = document.createElement("div");
       const show_note = document.createElement("div");
-      const note_title = document.createElement("h2");
+      const note_title = document.createElement("h3");
       const note_body = document.createElement("p");
       const note_created_date = document.createElement("p");
       const note_update_date = document.createElement("p");
@@ -58,7 +58,6 @@ function load_notes() {
 
       note_container.onmouseout = function () {
         delete_button.style.display = "none";
-        console.log("hello");
       };
 
       delete_button.onclick = function () {
