@@ -1,4 +1,6 @@
 node_modules
 
 # THE BUILD APP
-dist
+linux
+
+win
