@@ -36,9 +36,4 @@ $ electron-installer-debian --src linux/app-linux-x64/ --dest linux/installers/ 
 # Build the application to windows (You need have installed the wine64)
 $ electron-packager . app --platform linux --arch x64 --out win --executableName note-app
 
-
-
-# Creating the executable in .deb format
-$ electron-installer-debian --src win/app-linux-x64/ --dest win/installers/ --arch amd64
-
 ```
