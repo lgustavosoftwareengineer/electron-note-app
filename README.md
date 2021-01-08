@@ -25,16 +25,16 @@ $ npm install --save-dev electron-installer-debian
 
 ```sh
 # Build the application to linux
-$ electron-packager . app --platform linux --arch x64 --out linux/ --executableName note-app
+$ npm run build-linux
 
 
 
 # Creating the executable in .deb format
-$ electron-installer-debian --src linux/app-linux-x64/ --dest linux/installers/ --arch amd64
+$ npm run build-linux:deb
 
 
 # Build the application to windows (You need have installed the wine64 if you are trying to build in a linux machine)
-$ electron-packager . app --platform win32 --arch x64 --out win --executableName note-app
+$ npm run build-win
 
 ```
 

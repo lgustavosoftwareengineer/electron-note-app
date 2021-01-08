@@ -5,7 +5,12 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build-linux": "electron-packager . app --platform linux --arch x64 --out linux/ --executableName note-app",
+    "build-linux:clear": "rm -rf linux",
+    "build-linux:deb": "electron-installer-debian --src linux/app-linux-x64/ --dest linux/installers/ --arch amd64 --config config.json",
+    "build-win": "electron-packager . app --overwrite --platform=win32 --arch=ia32 --icon=resources/Icon.ico --prune=true --out=win --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"NoteME\"",
+    "build-win:clear": "rm -rf win"
   },
   "keywords": [],
   "author": "",

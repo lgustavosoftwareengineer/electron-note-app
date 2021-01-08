@@ -3,4 +3,4 @@ node_modules
 # THE BUILD APP
 linux
 
-win
+win*
